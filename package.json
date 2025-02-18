@@ -4,7 +4,8 @@
   "description": "This package is used as a demonstrator with AWS CodeBuild to write unit tests.",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha"
+    "start": "node src/cli.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,18 @@
   "homepage": "https://github.com/scttzth/node-js-game-app-unit-tests#readme",
   "dependencies": {
     "chai": "4.3.4",
+    "dotenv": "^16.4.7",
+    "launchdarkly-node-server-sdk": "^7.0.4",
     "mocha": "8.4.0",
     "sinon": "11.1.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/test/**/*.test.js"
+    ]
   }
 }
